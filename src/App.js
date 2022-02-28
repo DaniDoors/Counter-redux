@@ -1,14 +1,12 @@
-import CounterUseReducer from "./CounterUseReducer";
-import { combineReducers, createStore } from "redux";
-import { counter } from "./counter";
 import { Provider } from "react-redux";
-import CounterRedux from "./CounterRedux";
-
-const reducer = combineReducers({
-  counter,
-});
-
-const store = createStore(reducer);
+import { CounterUseReducer } from "./CounterUseReducer";
+import {
+  CounterRedux,
+  CounterReduxCount,
+  CounterReduxIncrement,
+  CounterReduxReset,
+} from "./CounterRedux";
+import { store } from "./store";
 
 export default function App() {
   return (
@@ -18,6 +16,10 @@ export default function App() {
         <CounterRedux />
         <CounterUseReducer />
         <CounterUseReducer />
+        <br />
+        <CounterReduxCount />
+        <CounterReduxIncrement amount={+25} />
+        <CounterReduxReset />
       </div>
     </Provider>
   );
