@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { counter } from "../store/counter";
+import { counter } from "../../store/counter";
 import { CounterCallbackIncrement } from "./CounterCallbackIncrement";
 import { CounterCallbackReset } from "./CounterCallbackReset";
 import { CounterUseReducerCount } from "./CounterUseReducerCount";

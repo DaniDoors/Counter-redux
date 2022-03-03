@@ -1,25 +1,18 @@
 import { Provider } from "react-redux";
-import { CounterUseReducer } from "./CounterUseReducer";
-import {
-  CounterRedux,
-  CounterReduxCount,
-  CounterReduxIncrement,
-  CounterReduxReset,
-} from "./CounterRedux";
+import { CounterUseReducer } from "./counter";
+import { CounterRedux, CounterReduxIncrement } from "./counter";
 import { store } from "./store";
+import { ToogleRedux } from "./toggle";
 
 export default function App() {
   return (
     <Provider store={store}>
       <div>
+        <ToogleRedux />
         <CounterRedux />
-        <CounterRedux />
-        <CounterUseReducer />
-        <CounterUseReducer />
-        <br />
-        <CounterReduxCount />
         <CounterReduxIncrement amount={+25} />
-        <CounterReduxReset />
+        <CounterUseReducer />
+        <CounterUseReducer />
       </div>
     </Provider>
   );
