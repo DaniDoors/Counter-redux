@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import { reset } from "../../store/counter";
+import { reset } from "../counters";
 
-export function CounterReduxReset() {
+export function CounterReduxReset({ id }) {
   const dispatch = useDispatch();
-  return <button onClick={() => dispatch(reset())}>reset</button>;
+  return <button onClick={() => dispatch(reset(id))}>reset</button>;
 }

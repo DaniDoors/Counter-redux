@@ -1,9 +1,9 @@
 import { combineReducers, createStore } from "redux";
-import { counter } from "./counter";
-import { toggle } from "../toggle/toggle";
+import { counters } from "./counter/counters";
+import { toggle } from "./toggle/toggle";
 
 const reducer = combineReducers({
-  counter,
+  counters,
   toggle,
 });
 export const store = createStore(

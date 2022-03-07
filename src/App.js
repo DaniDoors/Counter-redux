@@ -1,5 +1,4 @@
 import { Provider } from "react-redux";
-import { CounterUseReducer } from "./counter";
 import { CounterRedux, CounterReduxIncrement } from "./counter";
 import { store } from "./store";
 import { ToogleRedux } from "./toggle";
@@ -9,10 +8,10 @@ export default function App() {
     <Provider store={store}>
       <div>
         <ToogleRedux />
-        <CounterRedux />
+        <CounterRedux id="entrades" />
+        <CounterRedux id="sortides" />
+        <CounterRedux id="snacks" />
         <CounterReduxIncrement amount={+25} />
-        <CounterUseReducer />
-        <CounterUseReducer />
       </div>
     </Provider>
   );

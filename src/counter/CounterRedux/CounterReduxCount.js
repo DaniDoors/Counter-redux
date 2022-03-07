@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import { getCount } from "../../store/counter";
+import { getCount } from "../counters";
 
-export function CounterReduxCount() {
-  const count = useSelector(getCount);
+export function CounterReduxCount({ id }) {
+  const count = useSelector((state) => getCount(state, { id }));
   return (
     <>
-      <h1>Counter Redux separat</h1>
+      <h1>Counter {id}</h1>
       <div>{count}</div>
     </>
   );
